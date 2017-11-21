@@ -23,6 +23,8 @@
        else
          echo("<p>Deconnection failed</p>");
        ?>
-    <img src="rsc/kappa.png" />
+
+    <img src="rsc/kappa.png" alt="kappa" />
+    <img src="rsc/cat.jpg" alt="kitty" />
   </body>
 </html>
