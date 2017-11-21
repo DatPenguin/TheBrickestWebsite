@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <audio controls autoplay>
+      <source src="rsc/music.mp3" type="audio/mpeg" />
+    </audio>
+    
     <h1>Le site est up !</h1>
     <p>Il est un peu dégueu mais le serveur est chouette.</p>
     

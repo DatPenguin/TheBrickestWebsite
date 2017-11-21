@@ -7,6 +7,48 @@ body {
     -moz-animation: spin 4s linear infinite;
 }
 
+body:hover {
+    animation: aspin 4s linear infinite, blink 0.25s infinite;
+    -webkit-animation: aspin 4s linear infinite, blink 0.25s infinite;
+    -moz-animation: aspin 4s linear infinite, blink 0.25s infinite;
+}
+
+h1 {
+    color: #F0F;
+    animation: spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+}
+
+h1:hover {
+    color: #0FF;
+    animation: aspin 4s linear infinite;
+    -webkit-animation: aspin 4s linear infinite;
+    -moz-animation: aspin 4s linear infinite;
+}
+
+img {
+    top: 20%;
+    left: 30%;
+    animation: spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+}
+
+img:hover {
+    top: 20%;
+    left: 30%;
+    animation: aspin 4s linear infinite;
+    -webkit-animation: aspin 4s linear infinite;
+    -moz-animation: aspin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360 deg); } }
+@-moz-keyframes aspin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes aspin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes aspin { 100% { -webkit-transform: rotate(-360deg); transform: rotate(-360 deg); } }
 @-webkit-keyframes blink {
     0%, 33% {
 	background: #0FF;
@@ -18,49 +60,3 @@ body {
 	background: #FF0;
     }
 }
-
-body:hover {
-    animation: aspin 4s linear infinite, blink 0.25s infinite;
-    -webkit-animation: aspin 4s linear infinite, blink 0.25s infinite;
-    -moz-animation: aspin 4s linear infinite, blink 0.25s infinite;
-}
-
-h1 {
-//    position: absolute;
-    color: #F0F;
-    animation: spin 4s linear infinite;
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-}
-
-h1:hover {
-//    position: absolute;
-    color: #0FF;
-    animation: aspin 4s linear infinite;
-    -webkit-animation: aspin 4s linear infinite;
-    -moz-animation: aspin 4s linear infinite;
-}
-
-img {
-//    position: absolute;
-    top: 20%;
-    left: 30%;
-    animation: spin 4s linear infinite;
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360 deg); } }
-
-img:hover {
-//    position: absolute;
-    top: 20%;
-    left: 30%;
-    animation: aspin 4s linear infinite;
-    -webkit-animation: aspin 4s linear infinite;
-    -moz-animation: aspin 4s linear infinite;
-}
-@-moz-keyframes aspin { 100% { -moz-transform: rotate(-360deg); } }
-@-webkit-keyframes aspin { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes aspin { 100% { -webkit-transform: rotate(-360deg); transform: rotate(-360 deg); } }
