@@ -26,5 +26,6 @@
 
     <img src="rsc/kappa.png" alt="kappa" />
     <img src="rsc/cat.jpg" alt="kitty" />
+    <img src="rsc/doge.png" alt="doge" />
   </body>
 </html>
