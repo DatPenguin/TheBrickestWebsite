@@ -1,2 +1,2 @@
 # The Brickest Website
-CAUTION : Very danktest
+CAUTION : Very dank
