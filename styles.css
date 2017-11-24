@@ -2,17 +2,66 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     position: relative;
     margin: 0;
+    background: url("rsc/background.jpg") no-repeat fixed;
+    background-size: cover;
 }
 
 h1 {
     font-size: 2.5em;
 }
 
-.topBar {
-    height: 40vh;
-    width: 100%;
-    padding: 10px 10px;
+.menu-list {
+    white-space: nowrap;
+    list-style: none;
+    margin-top: 1.5vw;
+    font-size: 1.2em;
+}
+
+.navBar {
+    height: 3vw;
+    padding: 10px;
     margin: 0;
-    background-image: url("rsc/hero.jpg");
+    background-color: #fafafa;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 10px -2px black;
+}
+
+.navBar img {
+    height: 3vw;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+.hero {
+    height: 20vw;
+    padding: 10px;
+    margin: 0 0 0 0;
     background-size: cover;
+    background: url("rsc/hero.png") no-repeat center center;
+    top: 0;
+}
+
+.hero img {
+    width: 30vw;
+    min-width: 300px;
+    float: left;
+    margin-right: 1.5vw;
+}
+
+.hero .menu-list {
+    color: white;
+    margin-top: 2vw;
+}
+
+.main-content {
+    width: 85%;
+    padding: 0.5em 1em;
+    margin: -3em auto;
+    min-height: 100vh;
+    border-radius: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 20px 10px 3px black;
 }
