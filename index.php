@@ -6,22 +6,9 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-
-<script type="text/javascript">
-    (function ($) {
-        $(document).ready(function () {
-            $('#menu').hide();
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('#menu').fadeIn(250);
-                } else {
-                    $('#menu').fadeOut(250);
-                }
-            });
-        });
-    })(jQuery);
-</script>
+<script type="text/javascript" src="includes/script.js"></script>
 
 <div class="navBar" id="menu">
     <img src="rsc/title.png" alt="The Brickest Dungeon">
