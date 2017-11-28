@@ -1,20 +1,103 @@
+@import url("includes/fonts.css");
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
     margin: 0;
     background: url("rsc/background.jpg") no-repeat fixed;
     background-size: cover;
 }
 
-h1 {
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
     font-size: 2.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+    margin: 5px;
+}
+
+a:hover {
+    color: #7d0000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+td:nth-child(odd) {
+    text-align: left;
+}
+
+td:nth-child(even) {
+    text-align: right;
+}
+
+.main-content {
+    width: 95%;
+    padding: 1em 0;
+    margin: -3em auto;
+    min-height: 100vh;
+    border-radius: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 20px 10px 3px black;
 }
 
 .menu-list {
     white-space: nowrap;
     list-style: none;
-    margin-top: 1.5vw;
     font-size: 1.2em;
+}
+
+.menu-list a {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.menu-list a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.menu-list a:hover, .menu-list a:focus, .menu-list a:active {
+    color: #7d0000;
+}
+
+.menu-list a:hover:before, .menu-list a:focus:before, .menu-list a:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .navBar {
@@ -40,7 +123,7 @@ h1 {
     padding: 10px;
     margin: 0 0 0 0;
     background-size: cover;
-    background: url("rsc/hero.png") no-repeat center center;
+    background: url("rsc/hero.jpg") no-repeat center center;
     top: 0;
 }
 
@@ -53,15 +136,17 @@ h1 {
 
 .hero .menu-list {
     color: white;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
-.main-content {
-    width: 85%;
-    padding: 0.5em 1em;
-    margin: -3em auto;
-    min-height: 100vh;
-    border-radius: 20px;
-    background-color: #fafafa;
-    box-shadow: 0 20px 10px 3px black;
+.txtBlock {
+    margin: 10px;
+}
+
+.imageDiv {
+    background: url("rsc/blockBG.jpg") no-repeat fixed center center;
+    color: white;
+    padding: 5px 10px;
+    min-height: 30vh;
+    text-align: center;
 }

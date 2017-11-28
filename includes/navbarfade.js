@@ -1,11 +1,11 @@
 (function ($) {
     $(document).ready(function () {
-        $('#menu').hide();
+        $('#nBar').hide();
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
-                $('#menu').fadeIn(250);
+                $('#nBar').fadeIn(250);
             } else {
-                $('#menu').fadeOut(250);
+                $('#nBar').fadeOut(250);
             }
         });
     });
