@@ -16,8 +16,7 @@ h1, h2 {
 a {
     text-decoration: none;
     color: inherit;
-    padding: 5px;
-    margin: 5px;
+    transition: 0.4s;
 }
 
 a:hover {
@@ -36,12 +35,15 @@ tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
-td:nth-child(odd) {
-    text-align: left;
+input[type=text], [type=password], [type=date] {
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
-td:nth-child(even) {
-    text-align: right;
+label {
+    display: block;
+    float: left;
+    width: 10vw;
 }
 
 .main-content {
@@ -51,13 +53,13 @@ td:nth-child(even) {
     min-height: 100vh;
     border-radius: 20px;
     background-color: #fafafa;
-    box-shadow: 0 20px 10px 3px black;
+    box-shadow: 0 0 10px 3px black;
 }
 
 .menu-list {
     white-space: nowrap;
-    list-style: none;
     font-size: 1.2em;
+    float: left;
 }
 
 .menu-list a {
@@ -68,6 +70,8 @@ td:nth-child(even) {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    padding: 5px;
+    margin: 5px;
 }
 
 .menu-list a:before {
@@ -101,6 +105,7 @@ td:nth-child(even) {
 }
 
 .navBar {
+    white-space: nowrap;
     height: 3vw;
     padding: 10px;
     margin: 0;
@@ -110,12 +115,32 @@ td:nth-child(even) {
     width: 100%;
     top: 0;
     box-shadow: 0 4px 10px -2px black;
+    min-height: 20px;
 }
 
 .navBar img {
     height: 3vw;
     margin: 0 20px 0 0;
     float: left;
+}
+
+.navBar .menu-list {
+    position: absolute;
+    margin-left: 18vw;
+    top: 1.5vw;
+
+}
+
+.navAccount {
+    white-space: nowrap;
+    right: 4vw;
+    float: right;
+    position: absolute;
+    top: 1.5vw;
+}
+
+.colname {
+    font-weight: bold;
 }
 
 .hero {
@@ -136,7 +161,7 @@ td:nth-child(even) {
 
 .hero .menu-list {
     color: white;
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 .txtBlock {
@@ -149,4 +174,32 @@ td:nth-child(even) {
     padding: 5px 10px;
     min-height: 30vh;
     text-align: center;
+}
+
+.footer {
+    text-align: center;
+    background-color: #424242;
+    bottom: 0;
+    width: 95%;
+    height: 8vh;
+    margin: auto;
+    box-shadow: 0 10px 10px 3px black;
+}
+
+.footer p {
+    color: #e2e2e2;
+    padding: 2.5vh 1.5vh 1.5vh;
+    font-size: 12px;
+    float: left;
+}
+
+.footer a {
+    float: right;
+    bottom: 2vh;
+    position: absolute;
+    right: 5%;
+}
+
+.footer a:hover {
+    color: #b1a59c;
 }
