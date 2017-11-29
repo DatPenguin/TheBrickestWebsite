@@ -2,13 +2,20 @@
 include("includes/top.php");
 include("includes/navbar.php");
 include("includes/hero.php");
+include("includes/sqlutil.php");
 ?>
     <div class="main-content">
         <div class="txtBlock">
             <h1>Connexion</h1>
             <?php
             if ($_POST['pseudo'] != "" && $_POST['mdp'] != "") {  // Si on a entré un login et un mdp
-                echo "La bite à dudule";
+
+                if (dbcontains($_POST['pseudo'])) {
+                    if (password_verify($_POST['mdp'], get_hash_for_user($_POST['pseudo'])))
+                        echo "Login successful";
+                    else
+                        echo "Tu vas arrêter de mentir comme ça ?";
+                }
             } else
                 echo "La techa à Natacha";
             ?>

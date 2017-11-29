@@ -6,7 +6,7 @@ require_once("includes/sqlutil.php");
 ?>
     <div class="main-content">
         <div class="txtBlock">
-            <h1>SQL</h1>
+            <h1>Liste des Utilisateurs</h1>
             <?php
             print_table("myusers");
             ?>

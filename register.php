@@ -26,7 +26,7 @@ require_once("includes/util.php");
                     $dob = $dobar[2] . '/' . $dobar[1] . '/' . $dobar[0];
 
                     $query = 'INSERT INTO myusers VALUES (\'' . $_POST['pseudo'] . '\',\''
-                        . $_POST['mdp'] . '\',\'' . $_POST['name'] . '\',\''
+                        . password_hash($_POST['mdp'], PASSWORD_DEFAULT) . '\',\'' . $_POST['name'] . '\',\''
                         . $_POST['surname'] . '\', \'' . $dob . '\')';
 
                     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
