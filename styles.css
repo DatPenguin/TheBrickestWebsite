@@ -43,7 +43,7 @@ input[type=text], [type=password], [type=date] {
 label {
     display: block;
     float: left;
-    width: 10vw;
+    width: 11vw;
 }
 
 .main-content {
