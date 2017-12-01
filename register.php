@@ -15,7 +15,7 @@ define("HASH", false);
             if ($_POST['pseudo'] != "") {
                 $dbconnection = pg_connect("host=localhost dbname=postgres user=pguser password=password") or die('Connection failed : ' . pg_last_error());
 
-                if (dbcontains($_POST['login'])) {
+                if (dbcontains("player_account", $_POST['login'])) {
                     echo '<p>Cet identifiant est déjà utilisé.</p>';
                     print_register_form();
                 } else if ($_POST['mdp'] != $_POST['mdp2']) {

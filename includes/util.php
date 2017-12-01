@@ -1,6 +1,5 @@
 <?php
-function print_register_form()
-{
+function print_register_form() {
     echo("<form action=\"#\" method=\"post\">
                 <label for=\"login\">Identifiant :</label><input id=\"login\" type=\"text\" name=\"login\" required/><br/>
                 <label for=\"pseudo\">Pseudo :</label><input id=\"pseudo\" type=\"text\" name=\"pseudo\" required/><br/>
@@ -11,6 +10,14 @@ function print_register_form()
                 <label for=\"dob\">Date de Naissance :</label><input type=\"date\" id=\"dob\" name=\"dob\" required/><br/>
                 <input type=\"submit\" style=\"margin: 10px 13vw\"/>
             </form>");
+}
+
+function print_login_form() {
+    echo "<form action=\"#\" method=\"post\">
+                <label for=\"login\">Login :</label><input id=\"login\" type=\"text\" name=\"login\" required/><br/>
+                <label for=\"mdp\">Mot de Passe :</label><input id=\"mdp\" type=\"password\" name=\"mdp\" required/><br/>
+                <input type=\"submit\" style=\"margin: 10px 13vw\"/>
+            </form>";
 }
 
 ?>
