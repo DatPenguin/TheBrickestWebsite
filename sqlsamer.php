@@ -9,6 +9,8 @@ require_once("includes/sqlutil.php");
             <h1>Liste des Utilisateurs</h1>
             <?php
             print_table("myusers");
+            print_table("player_account");
+            print_table("player_info");
             ?>
         </div>
     </div>

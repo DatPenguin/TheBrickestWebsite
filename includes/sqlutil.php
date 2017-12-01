@@ -31,7 +31,7 @@ function print_table($tablename)
             echo "\t\t<td>$col_value</td>\n";
         echo "\t</tr>\n";
     }
-    echo "</table>\n";
+    echo "</table>\n<br />\n";
 
     pg_free_result($result);
     pg_close();
