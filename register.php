@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/top.php");
 include("includes/navbar.php");
 include("includes/hero.php");
@@ -10,7 +11,6 @@ define("HASH", false);
     <div class="main-content">
         <div class="txtBlock">
             <h1>Inscription</h1>
-            <p>Tous les champs sont obligatoires.</p>
             <?php
             if ($_POST['pseudo'] != "") {
                 $dbconnection = pg_connect("host=localhost dbname=postgres user=pguser password=password") or die('Connection failed : ' . pg_last_error());
@@ -46,8 +46,10 @@ define("HASH", false);
                     pg_free_result($result);
                     pg_close();
                 }
-            } else
+            } else {
+                echo "<p>Tous les champs sont obligatoires.</p>";
                 print_register_form();
+            }
             ?>
         </div>
     </div>

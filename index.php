@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/top.php");
 include("includes/navbar.php");
 include("includes/hero.php");

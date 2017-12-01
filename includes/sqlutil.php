@@ -1,9 +1,10 @@
 <?php
+define("HASH", false);
 function dbcontains($pseudo)
 {
     $dbconnection = pg_connect("host=localhost dbname=postgres user=pguser password=password") or die('Connection failed : ' . pg_last_error());
 
-    $query = 'SELECT * FROM MyUsers WHERE login LIKE \'' . $pseudo . '\'';
+    $query = 'SELECT * FROM player_account WHERE login LIKE \'' . $pseudo . '\'';
     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
     if (pg_num_rows($result) == 0)
@@ -18,7 +19,6 @@ function print_table($tablename)
     $query = 'SELECT * FROM ' . $tablename;
     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
-    //echo "<p>Query : \"$query\"</p>\n";
     echo "<table style='width: 100%'>\n<tr>\n";
 
     $i = pg_num_fields($result);
@@ -64,10 +64,10 @@ function print_table_constraint($tablename, $constraint)
 function get_hash_for_user($user)
 {
     $dbconnection = pg_connect("host=localhost dbname=postgres user=pguser password=password") or die('Connection failed : ' . pg_last_error());
-    $query = 'SELECT pass FROM myusers WHERE login LIKE \'' . $user . '\'';
+    $query = 'SELECT p_password FROM player_account WHERE login LIKE \'' . $user . '\'';
     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
-    return pg_fetch_array($result, 0, PGSQL_ASSOC)[pass];
+    return pg_fetch_array($result, 0, PGSQL_ASSOC)[p_password];
 }
 
 ?>

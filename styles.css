@@ -43,7 +43,7 @@ input[type=text], [type=password], [type=date] {
 label {
     display: block;
     float: left;
-    width: 11vw;
+    width: 13vw;
 }
 
 .main-content {
@@ -162,6 +162,11 @@ label {
 .hero .menu-list {
     color: white;
     margin-top: 2vw;
+}
+
+.hero .navAccount {
+    color: white;
+    top: 3vw;
 }
 
 .txtBlock {

@@ -9,7 +9,7 @@ function print_register_form()
                 <label for=\"name\">Prénom :</label><input type=\"text\" id=\"name\" name=\"name\" required/><br/>
                 <label for=\"surname\">Nom :</label><input type=\"text\" id=\"surname\" name=\"surname\" required/><br/>
                 <label for=\"dob\">Date de Naissance :</label><input type=\"date\" id=\"dob\" name=\"dob\" required/><br/>
-                <input type=\"submit\" style=\"margin: 10px 10vw\"/>
+                <input type=\"submit\" style=\"margin: 10px 13vw\"/>
             </form>");
 }
 
