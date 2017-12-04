@@ -4,6 +4,13 @@ include("includes/top.php");
 include("includes/navbar.php");
 include("includes/hero.php");
 require_once("includes/sqlutil.php");
+if (!isset($_SESSION['pseudo'])) {
+    header("Location:index.php");
+    die();
+} else if (!$_SESSION['admin']) {
+    header("Location:index.php");
+    die();
+}
 ?>
     <div class="main-content">
         <div class="txtBlock">
@@ -12,6 +19,7 @@ require_once("includes/sqlutil.php");
             print_table("myusers");
             print_table("player_account");
             print_table("player_info");
+            print_table("administrators");
             ?>
         </div>
     </div>
