@@ -10,6 +10,7 @@ include("includes/hero.php");
             <p>Bonjour et bienvenue, <?php echo $_SESSION['pseudo']; ?> !</p>
             <p>Vous vous appelez <?php echo $_SESSION['name'] . " " . $_SESSION['surname'] ?>.</p>
             <p>Vous êtes né le <?php echo $_SESSION['dob'] ?>.</p>
+            <p>Vous avez un elo de <?php echo $_SESSION['elo'] ?>.</p>
         </div>
     </div>
 <?php

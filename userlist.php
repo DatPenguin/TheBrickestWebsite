@@ -16,10 +16,13 @@ if (!isset($_SESSION['pseudo'])) {
         <div class="txtBlock">
             <h1>Liste des Utilisateurs</h1>
             <?php
-            print_table("myusers");
+            /*print_table("myusers");
             print_table("player_account");
             print_table("player_info");
-            print_table("administrators");
+            print_table("administrators");*/
+            list_users();
+            echo "<h1>Liste des Administrateurs</h1>";
+            list_admins();
             ?>
         </div>
     </div>

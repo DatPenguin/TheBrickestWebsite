@@ -37,7 +37,7 @@ define("HASH", false);
                     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
                     $query = 'INSERT INTO Player_Info VALUES (\'' . $_POST['login'] . '\',\''
-                        . $_POST['name'] . '\',\'' . $_POST['surname'] . '\',\'' . $dob . '\')';
+                        . $_POST['surname'] . '\',\'' . $_POST['name'] . '\',\'' . $dob . '\')';
 
                     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
