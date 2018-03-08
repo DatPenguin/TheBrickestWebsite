@@ -41,6 +41,13 @@ define("HASH", false);
 
                     $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
 
+                    $query = 'INSERT INTO has_class VALUES (\'Wizard\', 1, 0, \'' . $_POST['login'] . '\')';
+                    $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
+                    $query = 'INSERT INTO has_class VALUES (\'Paladin\', 1, 0, \'' . $_POST['login'] . '\')';
+                    $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
+                    $query = 'INSERT INTO has_class VALUES (\'Warrior\', 1, 0, \'' . $_POST['login'] . '\')';
+                    $result = pg_query($query) or die('Echec de la requete : ' . pg_last_error());
+
                     echo("Votre inscription a bien été effectuée. Vous pouvez désormais vous connecter.");
 
                     pg_free_result($result);
